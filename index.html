@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>The HTML5 Herald</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <link rel="stylesheet" href="css/styles.css?v=1.0">
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+
+            .buttonContainer {
+                text-align: center;
+                flex: 1;
+            }
+
+            .buttonStyle {
+                font-family: fantasy;
+                width: 20em;
+                height: 3em;
+                border-radius: 5px;
+                font-size: 1em;
+            }
+
+            .bounds {
+                flex: 1;
+            }
+
+            .passage {
+                margin-bottom: 0.75em;
+                font-size: 2em;
+                text-align: center;
+                flex: 2;
+            }
+
+            html {
+                height: 100%;
+            }
+            
+            body {
+                height: 100%;
+            }
+        </style>
+    </head>
+
+    <body onload="newPassage()" style="font-family: fantasy; background-color: #4A80C1;">
+        <div class="container">
+            <div class="bounds"></div>
+            <div class="bounds">
+                <div id="passage" class="passage"></div>
+                <div class="buttonContainer">
+                    <button class="buttonStyle" onclick="newPassage()">New Passage</button>
+                </div>
+            </div>
+            <div class="bounds"></div>
+        </div>
+    </body>
+</html>
