@@ -1,22 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { myImmortal } from './my_immortal';
+import { useState } from 'react';
+
+const getRandomNumber = () => Math.floor(Math.random() * myImmortal.length)
 
 function App() {
+  const [passage, setPassage] = useState(myImmortal[getRandomNumber()])
+
+  console.info({passage});
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div style={{marginBottom: '1em'}}>{passage}</div>
+        <button style={{fontFamily: 'fantasy', textAlign: 'center', borderRadius: '3px', fontSize: '0.75em'}} onClick={() => setPassage(myImmortal[getRandomNumber()])}>New Passage</button>
       </header>
     </div>
   );
